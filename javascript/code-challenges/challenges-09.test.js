@@ -10,15 +10,18 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  return arr.reduce((a, b) => {
-    if (a > b) {
-      return a;
-    } else {
-      return b;
-    }
-  });
+  // return arr.reduce((a, b) => {
+  //   if (a > b) {
+  //     return a;
+  //   } else {
+  //     return b;
+  //   }
+  // });
+//};
+return arr.reduce((preVal, currValue)+> {
+  return currValue > preval ? currValue : preVal
+});
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -74,6 +77,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  return Object.entries(obj).mao(entry => entry,join(': '));
 };
 
 
@@ -130,7 +134,11 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  return arr.map(person => person.house);
+  arr.forEach(person => {
+    houses.push(person.house);
+  });
+
+  return houses;
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -147,6 +155,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  let children = 0;
+
+  arr.forEach(person => {
+    if(person.name === character){
+      Object.keys(person).forEach((key,idx)=> {
+        if(key === 'children') children = Object.values(person)[idx].length;
+      });
+    }
+  });
+
+  return children ? true : false;
 
 };
 
