@@ -9,7 +9,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
-  return returnTen(str);
+  return Math.max(...[].concat(...matrix));
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,6 +28,7 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  return Math.max(...[].concat(...matrix));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -106,6 +107,7 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  return hours.map((hour, index) => ({ sales: `${data[index]} cookies`, time: hour }));
 };
 
 /* ------------------------------------------------------------------------------------------------

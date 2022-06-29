@@ -10,18 +10,16 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  // return arr.reduce((a, b) => {
-  //   if (a > b) {
-  //     return a;
-  //   } else {
-  //     return b;
-  //   }
-  // });
-//};
-return arr.reduce((preVal, currValue)+> {
-  return currValue > preval ? currValue : preVal
-});
+  return arr.reduce((a, b) => {
+    if (a > b) {
+      return a;
+    } else {
+      return b;
+    }
+  });
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -37,9 +35,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
-  const getCourseKeys = (obj) => {
-    // Solution code here...
-    return Object.keys(obj);
+  return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
