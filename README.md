@@ -24,10 +24,12 @@ To run your tests
 
 ## Reverse an Array
 <!-- Description of the challenge -->
-User wants to reverse an array 
+User wants to reverse an array
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
+/Users/test/Documents/data-structures-and-algorithms/python/docs/graph_business_trip/Code-Challenge1.png
+
