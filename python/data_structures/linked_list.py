@@ -79,7 +79,7 @@ class LinkedList:
             raise TargetError
 
     def insert_after(self, search_value, value):
-        raise TargetError
+
         current = self.head
 
         while current:
@@ -88,7 +88,7 @@ class LinkedList:
                 return
             else:
                 current = current.next
-
+        raise TargetError
 
 class Node:
     def __init__(self, value, next=None):
