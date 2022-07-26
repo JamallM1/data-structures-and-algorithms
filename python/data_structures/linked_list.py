@@ -14,7 +14,7 @@ class LinkedList:
 
         while current is not None:
             text += "{ " + str(current.value) + " } -> "
-            print(txt)
+            print(text)
             current = current.next
         return text + "NULL"
 
@@ -50,10 +50,12 @@ class LinkedList:
                 # moves to the next one
                 current = current.next
 
-    def insert_before(self, search_val, value):
-        new_node = Node(value)
+    def insert_before(self, search_value, value):
+        node_two = Node(value)
+        if not self.head:
+            raise TargetError
 
-        if self.head.value == search_val:
+        if self.head.value == search_value:
             self.insert(value)
             return
 
@@ -62,22 +64,26 @@ class LinkedList:
 
         while current and current.next:
             # if current node has a value it looks for value
-            if current.next.value == search_val:
+            if current.next.value == search_value:
 
-                new_node.next = current.next
+                node_two.next = current.next
 
-                current.next = new_node
+                current.next = node_two
 
                 break
+            # Danger
+
             else:
                 current = current.next
+        else:
+            raise TargetError
 
-    def insert_after(self, search_val, value):
-
+    def insert_after(self, search_value, value):
+        raise TargetError
         current = self.head
 
         while current:
-            if current.value == search_val:
+            if current.value == search_value:
                 self.insert_before(current.next.value, value)
                 return
             else:
@@ -90,5 +96,5 @@ class Node:
         self.next = next
 
 
-class TargetError:
+class TargetError(Exception):
     pass
