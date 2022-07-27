@@ -90,11 +90,31 @@ class LinkedList:
                 current = current.next
         raise TargetError
 
+
+
+    def kth_from_end(self, k):
+        n = 0
+        curr = self.head
+
+        while curr:
+            curr = curr.next
+            n = n + 1
+        loop_count = n - k
+        if k >= n:
+            raise TargetError
+        elif k < 0:
+            raise TargetError
+
+        curr = self.head
+        for i in range(loop_count):
+            if i == loop_count - 1:
+                return curr.value
+            curr = curr.next
 class Node:
-    def __init__(self, value, next=None):
+    def __init__(self, value, next = None):
         self.value = value
         self.next = next
 
-
 class TargetError(Exception):
     pass
+
