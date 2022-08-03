@@ -32,4 +32,4 @@ User wants to reverse an array
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
 /Users/test/Documents/data-structures-and-algorithms/python/docs/graph_business_trip/Code-Challenge1.png
-
+![codechallenge.png](codechallenge.png)
