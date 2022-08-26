@@ -4,7 +4,7 @@ from data_structures.hashtable import Hashtable
 def test_exists():
     assert Hashtable
 
- @pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_get_apple():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
@@ -12,7 +12,7 @@ def test_get_apple():
     expected = "Used for apple sauce"
     assert actual == expected
 
- @pytest.mark.skip("TODO")
+ # @pytest.mark.skip("TODO")
 def test_get_nonexistent():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
@@ -21,7 +21,7 @@ def test_get_nonexistent():
     expected = None
     assert actual == expected
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_unique_keys():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
@@ -31,7 +31,7 @@ def test_unique_keys():
     expected = {'apple', 'banana', 'strawberry'}
     assert actual == expected
 
- @pytest.mark.skip("TODO")
+ # @pytest.mark.skip("TODO")
 def test_with_collisions():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
@@ -41,7 +41,7 @@ def test_with_collisions():
     expected = {'apple', 'pplea', 'banana'}
     assert actual == expected
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_in_range():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
