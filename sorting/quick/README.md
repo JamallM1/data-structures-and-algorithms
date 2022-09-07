@@ -1,4 +1,3 @@
-
 We are given a basic list of scrambled numbers. The list is what our quick_sort program will take in and begin to look for a partition.
 
 ![CC28-1](CC28-1.png)
